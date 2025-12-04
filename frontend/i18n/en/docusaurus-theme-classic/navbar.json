@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "Imbus Tunisia",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Imbus Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Règles internes": {
+    "message": "Internal Rules",
+    "description": "Navbar item with label Règles internes"
+  },
+  "item.label.Login": {
+    "message": "Login",
+    "description": "Navbar item with label Login"
+  },
+  "item.label.Site officiel": {
+    "message": "Official Website",
+    "description": "Navbar item with label Site officiel"
+  }
+}

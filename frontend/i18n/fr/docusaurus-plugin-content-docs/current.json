@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Réglementations internes": {
+    "message": "Réglementations internes",
+    "description": "The label for category 'Réglementations internes' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Mesures techniques et organisationnelles": {
+    "message": "Mesures techniques et organisationnelles",
+    "description": "The label for category 'Mesures techniques et organisationnelles' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Confidentialité": {
+    "message": "Confidentialité",
+    "description": "The label for category 'Confidentialité' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Vérification, appréciation et évaluation": {
+    "message": "Vérification, appréciation et évaluation",
+    "description": "The label for category 'Vérification, appréciation et évaluation' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Confidentialite": {
+    "message": "Confidentialite",
+    "description": "The label for category 'Confidentialite' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category. Vérification, appréciation et évaluation ": {
+    "message": " Vérification, appréciation et évaluation ",
+    "description": "The label for category ' Vérification, appréciation et évaluation ' in sidebar 'tutorialSidebar'"
+  }
+}

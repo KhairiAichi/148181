@@ -1,0 +1,22 @@
+.logoContainer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.logo {
+  width: 150px;       
+  max-width: 80%;     
+  height: auto;
+  display: inline-block;
+}
+
+.alertBox {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}

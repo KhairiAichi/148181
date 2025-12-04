@@ -1,0 +1,99 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #004b8d, #00bcd4);
+  padding: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #004b8d;
+  margin-bottom: 1.5rem;
+}
+
+.form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form input:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 5px rgba(0, 188, 212, 0.3);
+  outline: none;
+}
+
+.form button {
+  width: 100%;
+  background: linear-gradient(90deg, #004b8d, #007acc);
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1.05rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form button:hover {
+  background: linear-gradient(90deg, #0068b8, #009ddf);
+  transform: translateY(-2px);
+}
+
+.error {
+  color: #d32f2f;
+  background-color: #fdecea;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.5rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+}
