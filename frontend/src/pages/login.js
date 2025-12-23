@@ -23,15 +23,23 @@ function LoginContent() {
     setError('');
 
     try {
+      // 1️⃣ استدعاء API تسجيل الدخول
       const loginRes = await axios.post('http://localhost:3000/api/v1/login', {
         email,
         password,
       });
 
-      const { token, user } = loginRes.data;
+      const { token, user } = loginRes.data; // 🔹 استخدم 'token' بدل 'jwt'
 
-      localStorage.setItem('jwt', token);
+      if (!token) {
+        setError('❌ Login failed: no token received');
+        return;
+      }
 
+      // 2️⃣ خزّن الـ token في localStorage
+      localStorage.setItem('token', token);
+
+      // 3️⃣ استدعاء الـ profile للمستخدم
       const profileRes = await axios.get(
         `http://localhost:3000/api/v1/users/${user.id}/profile`,
         {
@@ -41,14 +49,17 @@ function LoginContent() {
 
       const fullUser = profileRes.data;
 
+      // 4️⃣ خزّن بيانات المستخدم في localStorage
       localStorage.setItem('user', JSON.stringify(fullUser));
 
+      // 5️⃣ إعادة توجيه حسب الدور
       if (fullUser.role === 'admin') window.location.href = '/admin';
       else if (fullUser.role === 'developpeur') window.location.href = '/dev/dashboard';
       else if (fullUser.role === 'testeur') window.location.href = '/test/dashboard';
+      else window.location.href = '/'; // fallback
 
     } catch (err) {
-      console.error(err);
+      console.error(err.response?.data || err);
       setError('❌ Email ou mot de passe incorrect');
     }
   };
@@ -85,3 +96,4 @@ function LoginContent() {
     </div>
   );
 }
+

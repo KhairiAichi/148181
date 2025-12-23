@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from '@docusaurus/router';
 import { useUsers } from "../hooks/useUsers";
 import AdminForm from "./admin/AdminForm";
 import AdminTable from "./admin/AdminTable";
@@ -6,6 +7,9 @@ import AdminSearch from "./admin/AdminSearch";
 import { usersAPI } from "../api/users";
 
 export default function AdminContent() {
+
+  const history = useHistory(); // 👈  
+
   const { users, setUsers, error, setError } = useUsers();
 
   const [form, setForm] = React.useState({ name: "", email: "", password: "", role: "developpeur" });
@@ -58,6 +62,13 @@ export default function AdminContent() {
     <div style={{ textAlign: "center", marginTop: 30 }}>
       <h2>Bienvenue Admin</h2>
       {error && <p style={{ color: "red" }}>{error}</p>}
+
+      <button
+        style={{ marginBottom: 20 }}
+        onClick={() => history.push('/admin/annonces')}
+      >
+        Voir les Annonces
+      </button>
 
       <AdminSearch search={search} setSearch={setSearch} />
 
