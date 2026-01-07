@@ -26,7 +26,10 @@ export default function UserAnnonces() {
       const data = Array.isArray(res) ? res : res.annonces || [];
 
       const filtered = data.filter(
-        (a) => a.target_role === "all" || a.target_role === user.role
+        (a) => a.target_role === "all" || 
+               a.target_role === user.role ||
+               a.target_user_email === user.email
+
       );
 
       setAnnonces(filtered);
@@ -53,7 +56,9 @@ export default function UserAnnonces() {
           <div key={a.id} className={styles.annonce}>
             <h3>{a.title}</h3>
             <p>{a.content}</p>
-            <p className={styles.role}>Pour: {a.target_role}</p>
+            <p className={styles.role}>
+                  Pour: {a.target_user_email ? a.target_user_email : a.target_role==='all' ? 'Tous' : a.target_role}
+              </p>
             <p className={styles.info}>
               Créé par: {a.created_by_name || "Admin"} | Le:{" "}
               {new Date(a.created_at).toLocaleString()}
